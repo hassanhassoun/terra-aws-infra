@@ -1,5 +1,4 @@
 runcmd:
-  # Install fluentd
-  - curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
-  - service td-agent enable
-  - chkconfig td-agent on
+ - curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
+ - service td-agent enable
+ - chkconfig td-agent on

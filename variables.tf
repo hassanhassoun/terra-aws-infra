@@ -6,11 +6,6 @@ variable "secret_key" {
   description = "AWS secret access key"
 }
 
-variable "pubkey" { 
-  description = "AWS pub key used to launch instances"
-  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDViAd1D2aXdwKC1q5DTRItWQJI6pDopUnfTq7r37klQb9Ykswe/9nQejzpgcXnRnFl11Odjb+tRKmIqxBeSuUmn1jH+bB8hBbPpY8UEM/3bXzQUhqVl/GjSdIYzFB6ZBx68y4HwkiAQcYO71jVcjkEphzmWlLdMoatVH0OFlBs5ua1yemtpp35f/Czf5oeoFlAJwqeUy09oO7TFLC2Wp6llrcM1ayqJTK1SWIcJIqhG9S8GMPOqGW64EZPUaYKc8lrm4ppBQbp6/L8/gdLaX/WVIwFmczzezAx5HXDFDpcNGnDB1qfJ8p4p34oUxdI3vh9Ktr/XSR46fpWvnq8i7y9 ec2-user@ip-172-31-9-203"
-}
-
 variable "region"     { 
   default     = "us-west-2" 
 }
