@@ -1,12 +1,13 @@
 resource "aws_instance" "fluentd" {
-  count = "${lookup(var.instance_count, "fluentd")}"
-  ami = "${lookup(var.amis, "fluentd")}"
-  instance_type = "${lookup(var.instance_type, "fluentd")}"
-  subnet_id = "${aws_subnet.private.id}"
-  security_groups = ["${aws_security_group.default.id}"]
-  key_name = "${var.keypair}"
+  count = "${var.instance_count["fluentd"]}"
+  ami = "${var.amis["fluentd"]}"
+  instance_type = "${var.instance_type["fluentd"]}"
+  subnet_id = "${aws_subnet.public.id}"
+  vpc_security_group_ids = ["${aws_security_group.default.id}", "${aws_security_group.myaccess.id}"]
+  key_name = "${aws_key_pair.terra.key_name}"
   source_dest_check = false
-  user_data = "${file(\"config/fluentd.yml\")}"
+  user_data = "${file("config/fluentd.yml")}"
+  depends_on = ["aws_key_pair.terra"]
   tags = { 
     Name = "fluentd-${count.index}"
   }
