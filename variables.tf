@@ -6,6 +6,11 @@ variable "secret_key" {
   description = "AWS secret access key"
 }
 
+variable "pubkey"     { 
+  description = "Path to public key used to launch EC2 instances"
+  default     = "~/.ssh/id_rsa.pub"
+}
+
 variable "region"     { 
   default     = "us-west-2" 
 }
