@@ -39,6 +39,7 @@ variable "amis" {
   description = "AMI"
   default = {
     fluentd = "ami-f173cc91"
+    neo4j  = "ami-f173cc91"
   }
 }
 
@@ -46,6 +47,7 @@ variable "instance_type" {
   description = "Instance types"
   default = {
     fluentd = "t2.micro"
+    neo4j  = "t2.micro"
   }
 }
 
@@ -53,5 +55,6 @@ variable "instance_count" {
   description = "Instance count"
   default = {
     fluentd = "1"
+    neo4j  = "1"
   }
 }

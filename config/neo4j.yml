@@ -1,0 +1,5 @@
+#cloud-config
+runcmd:
+ - cd /root
+ - curl https://neo4j.com/artifact.php?name=neo4j-community-3.1.1-unix.tar.gz -o neo4j-community-3.1.1-unix.tar.gz
+ - tar -xzf neo4j-community-3.1.1-unix.tar.gz

@@ -1,4 +1,5 @@
+#cloud-config
 runcmd:
  - curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
- - service td-agent enable
+ - service td-agent start
  - chkconfig td-agent on
