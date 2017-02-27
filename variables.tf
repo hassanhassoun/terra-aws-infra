@@ -20,6 +20,19 @@ variable "vpc_name" {
   default     = "beanstalk"
 }
 
+variable "app_name" {
+  description = "Name of Elastic Bean Application"
+  default     = "my-ebean-app"
+}
+
+variable "project_name"     { 
+  default     = "bigproject" 
+}
+
+variable "client_name"     { 
+  default     = "clientname" 
+}
+
 variable "vpc_cidr" {
   description = "CIDR for VPC"
   default     = "172.40.0.0/16"
