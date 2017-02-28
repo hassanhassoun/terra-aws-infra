@@ -18,4 +18,11 @@ resource "aws_kinesis_firehose_delivery_stream" "delivery" {
     role_arn = "${aws_iam_role.firehose_role.arn}"
     bucket_arn = "${aws_s3_bucket.firstbucket.arn}"
   }
+
+  elasticsearch_configuration {
+    domain_arn = "${aws_elasticsearch_domain.domain.arn}"
+    role_arn = "${aws_iam_role.firehose_role.arn}"
+    index_name = "test"
+    type_name = "test"
+  }
 }
